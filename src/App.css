@@ -30,11 +30,71 @@
     transform: rotate(360deg);
   }
 }
-#map{
-  height:100vh;
+#map {
+  /*100% of document(viewport height)*/
+  width:100%;
+  height: 100vh;
+  position: relative;
 }
 html,body{
   height:100%;
   margin:0;
   padding:0;
+}
+/* Hamburger from W3 schools */
+
+.hamburger-container {
+  margin-left: .2rem;
+  cursor: pointer;
+  padding: 5px;
+  border: 0;
+  background-color: white;
+}
+
+.hamburger-bar {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+/*style for sidebar*/
+#sidebar{
+  position: absolute;
+  display: none;
+  top:0;
+  left:0;
+  width:200px;
+  max-width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background: white;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  
+  
+}
+
+.header{
+  font-size: 3em;
+ justify-content: center ;
+  
+  
+}
+
+.venue-item{
+  color :#ffc808;  
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid grey;
+
+}
+
+.SearchVenues{
+  margin-top: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  border-color: #141414;
+  max-width: 100%;
+  width:200px;
+  
 }
