@@ -138,16 +138,16 @@ constructor(props) {
 
 // Toggle sidebar
   onHamburgerClick = () => {
-    const sidebar = document.querySelector('sidebar');
+    const sidebar = document.querySelector('#sidebar');
     if (this.state.hamburgerActive) {
-      //sidebar.styles.transform = 'translateX(-250px)'
-      sidebar.styles.display="none";
+      sidebar.style.transform = 'translateX(-250px)'
+      //sidebar.styles.display="none";
       
       this.setState({ hamburgerActive: false });
     }
     else {
-      //sidebar.styles.transform = 'translateX(0px)'
-      sidebar.styles.display="block";
+      sidebar.style.transform = 'translateX(0px)'
+      //sidebar.styles.display="block";
       this.setState({sidebar: true});
       this.setState({ hamburgerActive: true });
     }
