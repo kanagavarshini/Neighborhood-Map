@@ -191,15 +191,15 @@ filtermyvenue(query) {
   render() {
     return (  
       <main>
-        <button aria-label='Hamburger Menu' tabIndex='0' className="hamburger-container" onClick={this.onHamburgerClick}> 
+        <button aria-label='Hamburger Menu' tabIndex='0' role="menu" className="hamburger-container" onClick={this.onHamburgerClick}> 
           <div className="hamburger-bar"></div>
           <div className="hamburger-bar"></div>
           <div className="hamburger-bar"></div>
         </button>
-        <div className="header"><strong>Pizza points- Orange County, CA</strong></div>     
+        <div className="header" aria-label="name"><strong>Pizza points- Orange County, CA</strong></div>     
         <div role="application" aria-label="map" id='map'></div>
         
-          <div aria-label="sidebar" id='sidebar'>
+          <div aria-label="sidebar" role="search menu" id='sidebar' >
           
           
           
@@ -210,7 +210,7 @@ filtermyvenue(query) {
               this.state.filtermyvenue && this.state.filtermyvenue.length > 0 && this.state.filtermyvenue.map((myvenue, index) => (
                   <div tabIndex="-1" key={index} className="venue-item">
                       {/* <h4>{myvenue.venue.name}</h4> */}
-                      <button onClick={()=>{this.listItemClick(myvenue.venue)}}>{myvenue.venue.name}</button>
+                      <button aria-label="search" onClick={()=>{this.listItemClick(myvenue.venue)}}>{myvenue.venue.name}</button>
                   </div>
               ))
             }
