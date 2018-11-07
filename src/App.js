@@ -113,7 +113,7 @@ initMap = () => {
     marker.addListener("click", function() {
       
       //change content before opening infowindow and set that to contentString which has information about name city and address
-      infowindow.setContent(contentString);
+      infowindow.setContent(contentString).focus();
 
       //this function will be called to open infowindow
       infowindow.open(map, marker);
